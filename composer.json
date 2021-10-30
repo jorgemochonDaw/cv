@@ -1,0 +1,13 @@
+{
+    "name": "koke/cv",
+    "description": "crear un formulario para hacer un cv",
+    "authors": [{
+        "name": "jrge mochon bernal",
+        "email": "bernalmochonjorge@gmail.com"
+    }],
+    "require": {},
+    "psr-4": {
+        "App\\": "./clases"
+    }
+
+}

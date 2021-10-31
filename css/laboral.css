@@ -1,0 +1,80 @@
+input {
+    height: 1.5rem;
+    outline: none;
+}
+
+label {
+    color: #0b3671;
+    font-weight: 500;
+}
+
+a {
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+    padding-left: 2rem;
+}
+
+#btn-a {
+    background-color: #ff6766;
+    border-radius: 20rem;
+    border: 1px solid red;
+    width: 15rem;
+    height: 2rem;
+}
+
+#contenedor-main {
+    margin-left: 15rem;
+    margin-top: 2rem;
+}
+
+#color-p {
+    color: #b1bdcf;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 18% 10%;
+}
+
+.color-azul {
+    color: #0b3671;
+}
+
+.max-width-11 {
+    max-width: 11rem;
+    margin-top:1rem;
+}
+
+.max-width-15 {
+    max-width: 15rem;
+    margin-top:1rem;
+}
+
+#submit {
+    margin-top: 4rem;
+    background-color: #ff6766;
+    color: #fff;
+    border-radius: 20rem;
+    border: 1px solid red;
+    height: 3rem;
+    width: 15rem;
+}
+
+#reset {
+    margin-top: 4rem;
+    background-color: #ff6766;
+    color: #fff;
+    border-radius: 20rem;
+    border: 1px solid red;
+    height: 3rem;
+    width: 15rem;
+}
+
+#submit,#reset:hover {
+    cursor: pointer;
+}
+
+.mgt-1 {
+    margin-top: 1rem;
+}

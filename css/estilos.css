@@ -15,6 +15,10 @@ a {
     padding-left: 2rem;
 }
 
+#imagen {
+    width: 10rem;
+}
+
 #btn-a {
     background-color: #ff6766;
     border-radius: 20rem;

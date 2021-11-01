@@ -297,7 +297,7 @@
             </form>
         </section>
         <section class="ocultar">
-            <button id="btn-crear">Crear Curriculum</button>
+            <button id="btn-crear">Generar CV</button>
         </section>
         <section class="ocultar" id="sectionShow">
             <?php

@@ -76,9 +76,11 @@ function mostrarCv(e) {
     e.preventDefault();
     let section6 = e.target.parentElement;
     if (section6.classList.contains('mostrar')) {
-        section6.remove('ocultar');
-        console.log(sectionShow);
-        sectionShow.classList.remove('ocultar');
-        sectionShow.classList.add('mostrar');
+        btnCrear.textContent = 'Espere...';
+        setTimeout(() => {
+            section6.remove('ocultar');
+            sectionShow.classList.remove('ocultar');
+            sectionShow.classList.add('mostrar');
+        }, 2000);
     }
 }

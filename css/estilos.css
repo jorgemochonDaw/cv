@@ -3,6 +3,23 @@ h1 {
     margin: 0;
 }
 
+h2 {
+    color: #002d6b;
+}
+
+p {
+    color: #899cb7;
+    font-weight: bold;
+}
+
+label {
+    color: #082e67;
+}
+
+input {
+    outline: none;
+}
+
 #header {
     background-color: #f6f5f0;
 }
@@ -20,15 +37,33 @@ h1 {
 
 .section {
     margin-left: 40rem;
-    margin-top: 3.90rem;
-    width: 30rem;
 }
 
 .fieldset {
+    width: 24rem;
+    border: 1px solid #ccc6bf;
+    -webkit-box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.72);
+    -moz-box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.72);
+    box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.72);
+    padding-left: 3rem;
+}
+
+.fieldset2 {
     width: 28rem;
-    -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.96);
-    -moz-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.96);
-    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.96);
+    border: 1px solid #ccc6bf;
+    -webkit-box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.72);
+    -moz-box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.72);
+    box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.72);
+    padding-left: 1.5rem;
+}
+
+.fieldset5 {
+    width: 18rem;
+    border: 1px solid #ccc6bf;
+    -webkit-box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.72);
+    -moz-box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.72);
+    box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.72);
+    padding-left: 1.5rem;
 }
 
 .legend {
@@ -57,6 +92,30 @@ h1 {
     display: flex;
 }
 
+.submit {
+    background-color: #ff6766;
+    border-radius: 20rem;
+    border: none;
+    width: 7rem;
+    height: 2rem;
+    color: white;
+}
+
+.reset {
+    background-color: #ff6766;
+    border-radius: 20rem;
+    border: none;
+    width: 7rem;
+    height: 2rem;
+    color: white;
+}
+
+.reset:hover,
+.submit:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
 .max-width-11 {
     max-width: 11rem;
 }
@@ -71,4 +130,41 @@ h1 {
 
 .mgl-2 {
     margin-left: 2rem;
+}
+
+.mg-btm-1 {
+    margin-bottom: 1rem;
+}
+
+#btn-crear {
+    width: 15rem;
+    height: 5rem;
+    background-color: #FF3D3C;
+    border-radius: 20rem;
+    border: none;
+    margin-left: 45rem;
+    margin-top: 17rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.crearCv {
+    width: 15rem;
+    height: 5rem;
+    background-color: #FF3D3C;
+    border-radius: 20rem;
+    border: none;
+    margin-left: 45rem;
+    margin-top: 17rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.crearCv:hover {
+    cursor: pointer;
+}
+
+#btn-crear:hover {
+    cursor: pointer;
+    background-color: red;
 }

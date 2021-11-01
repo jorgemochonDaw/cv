@@ -1,84 +1,74 @@
-input {
-    height: 1.5rem;
-    outline: none;
+h1 {
+    padding: 0;
+    margin: 0;
 }
 
-label {
-    color: #0b3671;
-    font-weight: 500;
+#header {
+    background-color: #f6f5f0;
 }
 
-a {
-    list-style: none;
-    text-decoration: none;
-    color: #fff;
-    padding-left: 2rem;
+#titulo {
+    font-size: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+#color-red {
+    color: #FF3D3C;
+}
+
+.section {
+    margin-left: 40rem;
+    margin-top: 3.90rem;
+    width: 30rem;
+}
+
+.fieldset {
+    width: 28rem;
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.96);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.96);
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.96);
+}
+
+.legend {
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #000000;
+    background: #FFFFFF;
+    text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
+}
+
+.ocultar {
+    display: none;
 }
 
 #imagen {
     width: 10rem;
+    height: 10rem;
 }
 
-#btn-a {
-    background-color: #ff6766;
-    border-radius: 20rem;
-    border: 1px solid red;
-    width: 15rem;
-    height: 2rem;
+.flex-columnas {
+    display: flex;
+    flex-direction: column;
 }
 
-#contenedor-main {
-    margin-left: 15rem;
-    margin-top: 2rem;
-}
-
-#color-p {
-    color: #b1bdcf;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: 18% 10%;
-}
-
-.color-azul {
-    color: #0b3671;
+.flex {
+    display: flex;
 }
 
 .max-width-11 {
     max-width: 11rem;
-    margin-top:1rem;
 }
 
-.max-width-15 {
-    max-width: 15rem;
-    margin-top:1rem;
+.max-width-9 {
+    max-width: 9rem;
 }
 
-#submit {
-    margin-top: 4rem;
-    background-color: #ff6766;
-    color: #fff;
-    border-radius: 20rem;
-    border: 1px solid red;
-    height: 3rem;
-    width: 15rem;
+.max-width-12 {
+    max-width: 12rem;
 }
 
-#reset {
-    margin-top: 4rem;
-    background-color: #ff6766;
-    color: #fff;
-    border-radius: 20rem;
-    border: 1px solid red;
-    height: 3rem;
-    width: 15rem;
-}
-
-#submit,#reset:hover {
-    cursor: pointer;
-}
-
-.mgt-1 {
-    margin-top: 1rem;
+.mgl-2 {
+    margin-left: 2rem;
 }

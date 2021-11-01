@@ -9,39 +9,39 @@
     <link rel="stylesheet" href="./css/estilos.css">
     <title>Creaer tu CV</title>
     <?php
+   
+    if (isset($_POST['informacionLaboral'])) {
+        $oficio = $_POST['oficio'];
+        $ciudad = $_POST['ciudad'];
+        $empleador = $_POST['empleador'];
+        $direccion = $_POST['direccion'];
+        $mesInicio = $_POST['mesInicio'];
+        $entrada = $_POST['entrada'];
+        $mesFin = $_POST['mesFin'];
+        $salida = $_POST['salida'];
+        $descripcion = $_POST['descripcion'];
+        $estudiando = $_POST['estudiando'];
+    }
 
-    // if (isset($_POST['informacionLaboral'])) {
-    //     $oficio = $_POST['oficio'];
-    //     $ciudad = $_POST['ciudad'];
-    //     $empleador = $_POST['empleador'];
-    //     $direccion = $_POST['direccion'];
-    //     $mesInicio = $_POST['mesInicio'];
-    //     $entrada = $_POST['entrada'];
-    //     $mesFin = $_POST['mesFin'];
-    //     $salida = $_POST['salida'];
-    //     $descripcion = $_POST['descripcion'];
-    //     $estudiando = $_POST['estudiando'];
-    // }
+    if (isset($_POST['informacionAptitudes'])) {
+        $centro = $_POST['centro'];
+        $titulo = $_POST['titulo'];
+        $ubicacion = $_POST['ubicacion'];
+        $direccion = $_POST['direccion'];
+        $campoEstudio = $_POST['campoEstudio'];
+        $fechaTitulo = $_POST['fechaTitulo'];
+        $seguirEstudiando = $_POST['seguirEstudiando'];
+    }
 
-    // if (isset($_POST['informacionAptitudes'])) {
-    //     $centro = $_POST['centro'];
-    //     $titulo = $_POST['titulo'];
-    //     $ubicacion = $_POST['ubicacion'];
-    //     $direccion = $_POST['direccion'];
-    //     $campoEstudio = $_POST['campoEstudio'];
-    //     $fechaTitulo = $_POST['fechaTitulo'];
-    //     $seguirEstudiando = $_POST['seguirEstudiando'];
-    // }
+    if (isset($_POST['informacionFormacion'])) {
+        $aptitudes = $_POST['aptitudes'];
+    }
 
-    // if (isset($_POST['informacionFormacion'])) {
-    //     $aptitudes = $_POST['aptitudes'];
-    // }
-
-    // if (isset($_POST['informacionAdicional'])) {
-    //     $diplomas = $_POST['diplomas'];
-    //     $idiomas = $_POST['idiomas'];
-    //     $aficiones = $_POST['aficiones'];
-    // }
+    if (isset($_POST['informacionAdicional'])) {
+        $diplomas = $_POST['diplomas'];
+        $idiomas = $_POST['idiomas'];
+        $aficiones = $_POST['aficiones'];
+    }
     ?>
 </head>
 
@@ -50,8 +50,8 @@
         <h1 id="titulo">CV<span id="color-red">Ideal</span></h1>
     </header>
     <main>
-    <form  method="post">
         <section class="mostrar section">
+            <form action="index.php" method="post">
                 <fieldset class="fieldset">
                     <h2>¿Cómo pueden contactarte los empleadores?</h2>
                     <p>Te recomendamos que incluyas un correo electrónico y un número de teléfono.</p>
@@ -134,162 +134,171 @@
                         <input type="radio" name="genero" value="otro"> Otro
                     </div>
                     <input type="reset" value="Borrar" class="reset">
-                    <button class="submit" id="formulario1">Enviar</button>
+                    <input type="submit" value="Enviar" class="submit" name="informacionPersonal" id="formulario1">
                 </fieldset>
+            </form>
         </section>
         <section class="ocultar section">
-            <fieldset class="fieldset2">
-                <h2>Añade tu historial laboral</h2>
-                <p>Comienza por el trabajo más reciente y termina con el más antiguo.</p>
-                <legend class="legend">Historial laboral</legend>
-                <div class="flex">
-                    <div>
-                        <div class="max-width-11 mg-btm-1">
-                            <label for="oficio">Puesto de trabajo</label>
-                            <input type="text" name="oficio">
+            <form action="index.php" method="post">
+                <fieldset class="fieldset2">
+                    <h2>Añade tu historial laboral</h2>
+                    <p>Comienza por el trabajo más reciente y termina con el más antiguo.</p>
+                    <legend class="legend">Historial laboral</legend>
+                    <div class="flex">
+                        <div>
+                            <div class="max-width-11 mg-btm-1">
+                                <label for="oficio">Puesto de trabajo</label>
+                                <input type="text" name="oficio">
+                            </div>
+                            <div class="max-width-11 mg-btm-1">
+                                <label for="ciudad">Ciudad</label>
+                                <input type="text" name="ciudad">
+                            </div>
                         </div>
-                        <div class="max-width-11 mg-btm-1">
-                            <label for="ciudad">Ciudad</label>
-                            <input type="text" name="ciudad">
-                        </div>
-                    </div>
-                    <div>
-                        <div class="max-width-11 mg-btm-1">
-                            <label for="empleador">Empleador</label>
-                            <input type="text" name="empleador">
-                        </div>
-                        <div class="max-width-11 mg-btm-1">
-                            <label for="direccion">Dirección </label>
-                            <input type="text" name="direccion">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex">
-                    <div>
-                        <div class="max-width-11 mg-btm-1">
-                            <label for="mesInicio">Mes de inicio</label>
-                            <input type="month" name="mesInicio">
-                        </div>
-                        <div class="max-width-11 mg-btm-1">
-                            <label for="entrada">Hora de entrada</label>
-                            <input type="time" name="entrada">
+                        <div>
+                            <div class="max-width-11 mg-btm-1">
+                                <label for="empleador">Empleador</label>
+                                <input type="text" name="empleador">
+                            </div>
+                            <div class="max-width-11 mg-btm-1">
+                                <label for="direccion">Dirección </label>
+                                <input type="text" name="direccion">
+                            </div>
                         </div>
                     </div>
-                    <div>
-                        <div class="max-width-11 mgl-2 mg-btm-1">
-                            <label for="mesFin">Mes de finalización</label>
-                            <input type="month" name="mesFin">
+
+                    <div class="flex">
+                        <div>
+                            <div class="max-width-11 mg-btm-1">
+                                <label for="mesInicio">Mes de inicio</label>
+                                <input type="month" name="mesInicio">
+                            </div>
+                            <div class="max-width-11 mg-btm-1">
+                                <label for="entrada">Hora de entrada</label>
+                                <input type="time" name="entrada">
+                            </div>
                         </div>
-                        <div class="max-width-11 mg-btm-1">
-                            <label for="salida">Hora de salida</label><br>
-                            <input type="time" name="salida">
+                        <div>
+                            <div class="max-width-11 mgl-2 mg-btm-1">
+                                <label for="mesFin">Mes de finalización</label>
+                                <input type="month" name="mesFin">
+                            </div>
+                            <div class="max-width-11 mg-btm-1">
+                                <label for="salida">Hora de salida</label><br>
+                                <input type="time" name="salida">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="flex-columnas">
+                    <div class="flex-columnas">
+                        <div class="mg-btm-1">
+                            <label for="descripcion">Descripcion</label>
+                            <textarea name="descripcion" rows="15" cols="60"></textarea>
+                        </div>
+                        <div class="mg-btm-1"><label for="estudiando">Sigo trabajando</label>
+                            <input type="checkbox" name="estudiando">
+                        </div>
+                    </div>
+                    <input type="reset" value="Borrar" class="reset">
+                    <input type="submit" value="Enviar" class="submit" name="informacionLaboral" id="formulario2">
+                </fieldset>
+            </form>
+        </section>
+        <section class="ocultar section">
+            <form action="index.php" method="post">
+                <fieldset class="fieldset">
+                    <h2>Descríbenos tu formación</h2>
+                    <p>Incluye todos los centros, aunque todavía estés allí o no te hayas graduado..</p>
+                    <legend class="legend">Formación</legend>
+                    <div class="flex">
+                        <div>
+                            <div class="max-width-11 mg-btm-1">
+                                <label for="centro">Nombre del centro</label>
+                                <input type="text" name="centro">
+                            </div>
+                            <div class="max-width-11 mg-btm-1">
+                                <label for="titulo">Título</label>
+                                <input type="text" name="titulo">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="max-width-11 mg-btm-1">
+                                <label for="ubicacion">Ubicación del centro</label>
+                                <input type="text" name="ubicacion">
+                            </div>
+                            <div class="max-width-11 mg-btm-1">
+                                <label for="direccion">Dirección </label>
+                                <input type="text" name="direccion">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div>
+                            <div class="max-width-11 mg-btm-1">
+                                <label for="campoEstudio">Campo de estudio</label>
+                                <input type="text" name="campoEstudio">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="max-width-12 mg-btm-1">
+                                <label for="fechaTitulo">Fecha de obtención del curso</label>
+                                <input type="date" name="fechaTitulo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="max-width-11 mg-btm-1">
+                        <label for="seguirEstudiando">Sigo estudiando</label>
+                        <input type="checkbox" name="seguirEstudiando">
+                    </div>
+                    <input type="reset" value="Borrar" class="reset">
+                    <input type="submit" value="Enviar" class="submit" name="informacionFormacion" id="formulario3">
+                </fieldset>
+            </form>
+        </section>
+        <section class="ocultar section">
+            <form action="index.php" method="post">
+                <fieldset class="fieldset">
+                    <legend class="legend">Aptitudes</legend>
+                    <h2>¿Qué aptitudes quieres destacar?</h2>
+                    <p>Utiliza las recomendaciones de nuestros expertos, que encontrarás más abajo para comenzar.</p>
+                    <div class="max-width-11 mg-btm-1">
+                        <label for="aptitudes">Detalla tus aptitudes</label>
+                        <textarea name="aptitudes" id="" cols="30" rows="10"></textarea>
+                    </div>
+                    <input type="reset" value="Borrar" class="reset">
+                    <input type="submit" value="Enviar" class="submit" name="informacionAptitudes" id="formulario4">
+                </fieldset>
+            </form>
+        </section>
+        <section class="ocultar section">
+            <form action="index.php" method="post">
+                <fieldset class="fieldset5">
+                    <legend class="legend">Información adicional</legend>
+                    <h2>¿Tienes algo más que añadir?</h2>
+                    <p>Estas secciones son opcionales..</p>
+                    <div>
+                        <label for="diplomas">Diplomas</label>
+                        <input type="checkbox" name="diplomas">
+                    </div>
                     <div class="mg-btm-1">
-                        <label for="descripcion">Descripcion</label>
-                        <textarea name="descripcion" rows="15" cols="60"></textarea>
+                        <label for="idiomas">Idiomas</label>
+                        <input type="checkbox" name="idiomas">
                     </div>
-                    <div class="mg-btm-1"><label for="estudiando">Sigo trabajando</label>
-                        <input type="checkbox" name="estudiando">
+                    <div class="max-width-11">
+                        <label for="aficiones">Aficiones</label>
+                        <textarea name="aficiones" cols="30" rows="10"></textarea>
                     </div>
-                </div>
-                <input type="reset" value="Borrar" class="reset">
-                <button class="submit" id="formulario2">Enviar</button>
-            </fieldset>
-        </section>
-        <section class="ocultar section">
-            <fieldset class="fieldset">
-                <h2>Descríbenos tu formación</h2>
-                <p>Incluye todos los centros, aunque todavía estés allí o no te hayas graduado..</p>
-                <legend class="legend">Formación</legend>
-                <div class="flex">
-                    <div>
-                        <div class="max-width-11 mg-btm-1">
-                            <label for="centro">Nombre del centro</label>
-                            <input type="text" name="centro">
-                        </div>
-                        <div class="max-width-11 mg-btm-1">
-                            <label for="titulo">Título</label>
-                            <input type="text" name="titulo">
-                        </div>
-                    </div>
-                    <div>
-                        <div class="max-width-11 mg-btm-1">
-                            <label for="ubicacion">Ubicación del centro</label>
-                            <input type="text" name="ubicacion">
-                        </div>
-                        <div class="max-width-11 mg-btm-1">
-                            <label for="direccion">Dirección </label>
-                            <input type="text" name="direccion">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex">
-                    <div>
-                        <div class="max-width-11 mg-btm-1">
-                            <label for="campoEstudio">Campo de estudio</label>
-                            <input type="text" name="campoEstudio">
-                        </div>
-                    </div>
-                    <div>
-                        <div class="max-width-12 mg-btm-1">
-                            <label for="fechaTitulo">Fecha de obtención del curso</label>
-                            <input type="date" name="fechaTitulo">
-                        </div>
-                    </div>
-                </div>
-                <div class="max-width-11 mg-btm-1">
-                    <label for="seguirEstudiando">Sigo estudiando</label>
-                    <input type="checkbox" name="seguirEstudiando">
-                </div>
-                <input type="reset" value="Borrar" class="reset">
-                <button class="submit" id="formulario3">Enviar</button>
-            </fieldset>
-        </section>
-        <section class="ocultar section">
-            <fieldset class="fieldset">
-                <legend class="legend">Aptitudes</legend>
-                <h2>¿Qué aptitudes quieres destacar?</h2>
-                <p>Utiliza las recomendaciones de nuestros expertos, que encontrarás más abajo para comenzar.</p>
-                <div class="max-width-11 mg-btm-1">
-                    <label for="aptitudes">Detalla tus aptitudes</label>
-                    <textarea name="aptitudes" id="" cols="30" rows="10"></textarea>
-                </div>
-                <input type="reset" value="Borrar" class="reset">
-                <button class="submit" id="formulario4">Enviar</button>
-            </fieldset>
-        </section>
-        <section class="ocultar section">
-            <fieldset class="fieldset5">
-                <legend class="legend">Información adicional</legend>
-                <h2>¿Tienes algo más que añadir?</h2>
-                <p>Estas secciones son opcionales..</p>
-                <div>
-                    <label for="diplomas">Diplomas</label>
-                    <input type="checkbox" name="diplomas">
-                </div>
-                <div class="mg-btm-1">
-                    <label for="idiomas">Idiomas</label>
-                    <input type="checkbox" name="idiomas">
-                </div>
-                <div class="max-width-11">
-                    <label for="aficiones">Aficiones</label>
-                    <textarea name="aficiones" cols="30" rows="10"></textarea>
-                </div>
-                <input type="reset" value="Borrar" class="reset">
-                <button class="submit" id="formulario5">Enviar</buttonclass>
-            </fieldset>
+                    <input type="reset" value="Borrar" class="reset">
+                    <input type="submit" value="Enviar" class="submit" name="informacionAdicional" id="formulario5">
+                </fieldset>
+            </form>
         </section>
         <section class="ocultar">
-            <button id="btn-crear">Espere...</button>
-            <input type="submit" name="s">
+            <button id="btn-crear">Crear Curriculum</button>
         </section>
-        </form>
         <section>
             <?php
-            if (isset($_POST['s'])) {
+             if (isset($_POST['informacionPersonal'])) {
+                 echo 's';
                 $nombre = $_POST['nombre'];
                 $apellido = $_POST['apellido'];
                 $calle = $_POST['calle'];
@@ -305,7 +314,7 @@
                 $genero = $_POST['genero'];
             ?>
 
-                <h2><?php echo $nombre ?></h2>
+            <h2><?php echo $nombre?></h2>
 
             <?php
             }

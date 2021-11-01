@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/estilos.css">
     <title>Creaer tu CV</title>
     <?php
-   
+
     if (isset($_POST['informacionLaboral'])) {
         $oficio = $_POST['oficio'];
         $ciudad = $_POST['ciudad'];
@@ -134,7 +134,8 @@
                         <input type="radio" name="genero" value="otro"> Otro
                     </div>
                     <input type="reset" value="Borrar" class="reset">
-                    <input type="submit" value="Enviar" class="submit" name="informacionPersonal" id="formulario1">
+                    <input type="submit" value="Guardar datos" class="submit" name="informacionPersonal">
+                    <button class="submit" id="formulario1">Continuar</button>
                 </fieldset>
             </form>
         </section>
@@ -166,7 +167,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="flex">
                         <div>
                             <div class="max-width-11 mg-btm-1">
@@ -199,7 +199,8 @@
                         </div>
                     </div>
                     <input type="reset" value="Borrar" class="reset">
-                    <input type="submit" value="Enviar" class="submit" name="informacionLaboral" id="formulario2">
+                    <input type="submit" value="Enviar" class="submit" name="informacionLaboral">
+                    <button class="submit" id="formulario2">Continuar</button>
                 </fieldset>
             </form>
         </section>
@@ -250,7 +251,8 @@
                         <input type="checkbox" name="seguirEstudiando">
                     </div>
                     <input type="reset" value="Borrar" class="reset">
-                    <input type="submit" value="Enviar" class="submit" name="informacionFormacion" id="formulario3">
+                    <input type="submit" value="Enviar" class="submit" name="informacionFormacion">
+                    <button class="submit" id="formulario3">Continuar</button>
                 </fieldset>
             </form>
         </section>
@@ -265,13 +267,14 @@
                         <textarea name="aptitudes" id="" cols="30" rows="10"></textarea>
                     </div>
                     <input type="reset" value="Borrar" class="reset">
-                    <input type="submit" value="Enviar" class="submit" name="informacionAptitudes" id="formulario4">
+                    <input type="submit" value="Enviar" class="submit" name="informacionAptitudes">
+                    <button class="submit" id="formulario4">Continuar</button>
                 </fieldset>
             </form>
         </section>
         <section class="ocultar section">
             <form action="index.php" method="post">
-                <fieldset class="fieldset5">
+                <fieldset class="fieldset">
                     <legend class="legend">Información adicional</legend>
                     <h2>¿Tienes algo más que añadir?</h2>
                     <p>Estas secciones son opcionales..</p>
@@ -288,17 +291,17 @@
                         <textarea name="aficiones" cols="30" rows="10"></textarea>
                     </div>
                     <input type="reset" value="Borrar" class="reset">
-                    <input type="submit" value="Enviar" class="submit" name="informacionAdicional" id="formulario5">
+                    <input type="submit" value="Enviar" class="submit" name="informacionAdicional">
+                    <button class="submit" id="formulario5">Continuar</button>
                 </fieldset>
             </form>
         </section>
         <section class="ocultar">
             <button id="btn-crear">Crear Curriculum</button>
         </section>
-        <section>
+        <section class="ocultar" id="sectionShow">
             <?php
-             if (isset($_POST['informacionPersonal'])) {
-                 echo 's';
+            if (isset($_POST['informacionPersonal'])) {
                 $nombre = $_POST['nombre'];
                 $apellido = $_POST['apellido'];
                 $calle = $_POST['calle'];
@@ -313,9 +316,19 @@
                 $nacimiento = $_POST['nacimiento'];
                 $genero = $_POST['genero'];
             ?>
-
-            <h2><?php echo $nombre?></h2>
-
+                <h2><?php echo $nombre ?></h2>
+                <p><?php echo $apellido ?></p>
+                <p><?php echo $calle ?></p>
+                <p><?php echo $urb ?></p>
+                <p><?php echo $postal ?></p>
+                <p><?php echo $ciudad ?></p>
+                <p><?php echo $ccaa ?></p>
+                <p><?php echo $numero ?></p>
+                <p><?php echo $email ?></p>
+                <p><?php echo $dni ?></p>
+                <p><?php echo $estado ?></p>
+                <p><?php echo $nacimiento ?></p>
+                <p><?php echo $genero ?></p>
             <?php
             }
             ?>

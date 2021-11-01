@@ -4,6 +4,7 @@ const btnFormulario3 = document.querySelector('#formulario3');
 const btnFormulario4 = document.querySelector('#formulario4');
 const btnFormulario5 = document.querySelector('#formulario5');
 const btnCrear = document.querySelector('#btn-crear');
+const sectionShow = document.querySelector('#sectionShow');
 
 eventos();
 
@@ -13,6 +14,7 @@ function eventos() {
     btnFormulario3.addEventListener('click', formulario3);
     btnFormulario4.addEventListener('click', formulario4);
     btnFormulario5.addEventListener('click', formulario5);
+    btnCrear.addEventListener('click', mostrarCv);
 }
 
 function formulario1(e) {
@@ -67,5 +69,16 @@ function formulario5(e) {
         let section6 = btnCrear.parentElement;
         section6.classList.remove('ocultar');
         section6.classList.add('mostrar');
+    }
+}
+
+function mostrarCv(e) {
+    e.preventDefault();
+    let section6 = e.target.parentElement;
+    if (section6.classList.contains('mostrar')) {
+        section6.remove('ocultar');
+        console.log(sectionShow);
+        sectionShow.classList.remove('ocultar');
+        sectionShow.classList.add('mostrar');
     }
 }

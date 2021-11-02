@@ -1,0 +1,23 @@
+#contenedor-main {
+    width: 30%;
+    border: 1px solid gray;
+    margin-left: 20rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.flex {
+    display: flex;
+}
+
+#contenedor-aside {
+    border: 1px solid gray;
+    position: absolute;
+    left: 60%;
+    top: 10%;
+    width: 20%;
+    z-index: 1;
+}

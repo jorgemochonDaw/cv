@@ -7,10 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/cv.css">
+    <link rel="stylesheet" href="./css/estilos.css">
     <title>Creaer tu CV</title>
     <?php
     session_start();
     if (isset($_POST['informacionAdicional'])) {
+        error_reporting(0);
         $_SESSION['informacionAdicional']  =
             array(
                 $_POST['diplomas'],
@@ -22,8 +24,10 @@
 </head>
 
 <body>
+    <header id="header">
+        <h1 id="titulo">CV<span id="color-red">Ideal</span></h1>
+    </header>
     <main id="contenedor-main">
-        <hr>
         <h2>Experiencia</h2>
         <hr>
         <section class="grid">

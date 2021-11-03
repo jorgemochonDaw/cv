@@ -15,9 +15,13 @@
         <h1 id="titulo">CV<span id="color-red">Ideal</span></h1>
     </header>
     <main>
-        <?php
-        include 'formularios/form1.php'
-        ?>
+        <section id="contenedor-bienvenida">
+            <h2>Bienvenido</h2>
+            <p>CvIdeal es una página web que mediante un formulario te genera el curriculum que siempre soñaste</p>
+            <div id="btn-inicio">
+                <a id="a-bienvenido" href="./formularios/form1.php">Empezar formulario</a>
+            </div>
+        </section>
     </main>
 
 </body>

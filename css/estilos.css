@@ -20,6 +20,81 @@ input {
     outline: none;
 }
 
+a {
+    text-decoration: none;
+}
+
+#a-bienvenido {
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    padding-left: 1.5rem;
+    padding-top: 1.6rem;
+}
+
+.a-volver {
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    padding-top: 0.50rem;
+    padding-left: 1.5rem;
+}
+
+#btn-inicio {
+    width: 15rem;
+    height: 5rem;
+    background-color: #FF3D3C;
+    border-radius: 20rem;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.btn-volver {
+    width: 15rem;
+    height: rem;
+    background-color: #FF3D3C;
+    border-radius: 20rem;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+#btn-inicio:hover,
+.btn-volver:hover {
+    cursor: pointer;
+    background-color: red;
+}
+
+#contenedor-bienvenida {
+    width: 28rem;
+    border: 1px solid #ccc6bf;
+    -webkit-box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.72);
+    -moz-box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.72);
+    box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.72);
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1.5rem;
+    margin-left: 40rem;
+    padding-bottom: 1.5rem;
+    margin-top: 10rem;
+}
+
+#error {
+    width: 28rem;
+    border: 1px solid #ccc6bf;
+    -webkit-box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.72);
+    -moz-box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.72);
+    box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.72);
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1.5rem;
+    margin-left: 40rem;
+    padding-bottom: 1.5rem;
+    margin-top: 7rem;
+    color: red;
+}
+
 #header {
     background-color: #f6f5f0;
 }
@@ -33,6 +108,10 @@ input {
 
 #color-red {
     color: #FF3D3C;
+}
+
+.color-rojo {
+    color: red;
 }
 
 .section {
@@ -110,8 +189,18 @@ input {
     color: white;
 }
 
+.contenedor-volver {
+    background-color: #ff6766;
+    border-radius: 20rem;
+    border: none;
+    width: 15rem;
+    height: 2rem;
+    color: white;
+}
+
 .reset:hover,
-.submit:hover {
+.submit:hover,
+.contenedor-volver:hover {
     background-color: red;
     cursor: pointer;
 }
@@ -167,4 +256,8 @@ input {
 #btn-crear:hover {
     cursor: pointer;
     background-color: red;
+}
+
+.hr-rojo {
+    border-color: red;
 }

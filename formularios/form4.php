@@ -11,6 +11,7 @@
     <?php
     session_start();
     if (isset($_POST['informacionFormacion'])) {
+        error_reporting(0);
         $_SESSION['informacionFormacion']  =
             array(
                 $_POST['centro'],
@@ -21,28 +22,69 @@
                 $_POST['fechaTitulo'],
                 $_POST['seguirEstudiando'],
             );
-    }
 
+        if (!$_POST['centro']) {
+            $errores[] = "Debes designar donde estudiaste";
+        }
+        if (!$_POST['titulo']) {
+            $errores[] = "Debes escribir que titulo obteniste";
+        }
+        if (!$_POST['ubicacion']) {
+            $errores[] = "Debes escribir donde estudiaste";
+        }
+        if (!$_POST['direccion']) {
+            $errores[] = "Debes escribir la calle en la que estudiaste";
+        }
+        if (!$_POST['campoEstudio']) {
+            $errores[] = "Debes escribir en que te especializaste";
+        }
+    }
     ?>
 </head>
 
 <body>
-    <section class="section">
-        <form action="form5.php" method="post">
-            <fieldset class="fieldset">
-                <legend class="legend">Aptitudes</legend>
-                <h2>¿Qué aptitudes quieres destacar?</h2>
-                <p>Utiliza las recomendaciones de nuestros expertos, que encontrarás más abajo para comenzar.</p>
-                <div class="max-width-11 mg-btm-1">
-                    <label for="aptitudes">Detalla tus aptitudes</label>
-                    <textarea name="aptitudes" id="" cols="30" rows="10"></textarea>
-                </div>
-                <input type="reset" value="Borrar" class="reset">
-                <input type="submit" value="Enviar" class="submit" name="informacionAptitudes">
-            </fieldset>
-        </form>
-    </section>
-
+    <header id="header">
+        <h1 id="titulo">CV<span id="color-red">Ideal</span></h1>
+    </header>
+    <?php
+    if (!empty($errores)) {
+    ?>
+        <div id="error">
+            <h1>Error Información personal</h1>
+            <hr class="hr-rojo">
+            <?php
+            foreach ($errores as $error) {
+            ?>
+                <p class="color-rojo"><?php echo $error; ?></p>
+            <?php
+            }
+            ?>
+            <div class="contenedor-volver">
+                <a class="a-volver" href="form3.php">Volver a informacion personal</a>
+            </div>
+        </div>
+    <?php
+    } else {
+    ?>
+        <section class="section">
+            <form action="form5.php" method="post">
+                <fieldset class="fieldset">
+                    <legend class="legend">Aptitudes</legend>
+                    <h2>¿Qué aptitudes quieres destacar?</h2>
+                    <label for="linkedin">Linkedin</label><br>
+                     <input type="url" name="linkedin">
+                    <div class="max-width-11 mg-btm-1">
+                        <label for="aptitudes">Detalla tus aptitudes</label>
+                        <textarea name="aptitudes" id="" cols="30" rows="10"></textarea>
+                    </div>
+                    <input type="reset" value="Borrar" class="reset">
+                    <input type="submit" value="Guardar datos" class="submit" name="informacionAptitudes">
+                </fieldset>
+            </form>
+        </section>
+    <?php
+    }
+    ?>
 </body>
 
 </html>
